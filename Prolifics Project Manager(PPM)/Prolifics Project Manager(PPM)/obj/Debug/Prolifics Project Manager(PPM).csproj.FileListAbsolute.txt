@@ -1,0 +1,8 @@
+C:\Users\rakes\source\repos\Prolifics Project Manager(PPM)\Prolifics Project Manager(PPM)\bin\Debug\Prolifics Project Manager(PPM).exe.config
+C:\Users\rakes\source\repos\Prolifics Project Manager(PPM)\Prolifics Project Manager(PPM)\bin\Debug\Prolifics Project Manager(PPM).exe
+C:\Users\rakes\source\repos\Prolifics Project Manager(PPM)\Prolifics Project Manager(PPM)\bin\Debug\Prolifics Project Manager(PPM).pdb
+C:\Users\rakes\source\repos\Prolifics Project Manager(PPM)\Prolifics Project Manager(PPM)\obj\Debug\Prolifics Project Manager(PPM).csproj.AssemblyReference.cache
+C:\Users\rakes\source\repos\Prolifics Project Manager(PPM)\Prolifics Project Manager(PPM)\obj\Debug\Prolifics Project Manager(PPM).csproj.SuggestedBindingRedirects.cache
+C:\Users\rakes\source\repos\Prolifics Project Manager(PPM)\Prolifics Project Manager(PPM)\obj\Debug\Prolifics Project Manager(PPM).csproj.CoreCompileInputs.cache
+C:\Users\rakes\source\repos\Prolifics Project Manager(PPM)\Prolifics Project Manager(PPM)\obj\Debug\Prolifics Project Manager(PPM).exe
+C:\Users\rakes\source\repos\Prolifics Project Manager(PPM)\Prolifics Project Manager(PPM)\obj\Debug\Prolifics Project Manager(PPM).pdb

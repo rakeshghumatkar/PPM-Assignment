@@ -1,0 +1,6 @@
+C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\obj\Debug\BusinessLogic.pdb

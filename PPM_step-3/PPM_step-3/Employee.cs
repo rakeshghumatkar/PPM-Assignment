@@ -31,9 +31,9 @@ namespace PPM_step_3
                 empolyeeId = eid;
 
                /* Console.WriteLine(" Enter the emplyee role Id");
-                int rid = Convert.ToInt32(Console.ReadLine());*/
+                int rid = Convert.ToInt32(Console.ReadLine());
 
-                /*bool flag = false;
+                bool flag = false;
                 for (int i = 0; i < Program.roleList.Count; i++)
                 {
                     //Role is already exist than assign to it

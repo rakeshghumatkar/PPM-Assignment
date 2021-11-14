@@ -1,0 +1,10 @@
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\PPM_step-3.1.exe.config
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\PPM_step-3.1.exe
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\PPM_step-3.1.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\obj\Debug\PPM_step-3.1.csproj.AssemblyReference.cache
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\obj\Debug\PPM_step-3.1.csproj.CoreCompileInputs.cache
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\obj\Debug\PPM_step-3.1.exe
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\obj\Debug\PPM_step-3.1.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\BusinessLogic.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\BusinessLogic.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\obj\Debug\PPM_step-3.1.csproj.CopyComplete

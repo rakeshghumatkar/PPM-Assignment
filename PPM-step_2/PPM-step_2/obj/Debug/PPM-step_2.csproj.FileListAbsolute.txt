@@ -1,0 +1,7 @@
+C:\Users\rakes\source\repos\PPM-step_2\PPM-step_2\bin\Debug\PPM-step_2.exe.config
+C:\Users\rakes\source\repos\PPM-step_2\PPM-step_2\bin\Debug\PPM-step_2.exe
+C:\Users\rakes\source\repos\PPM-step_2\PPM-step_2\bin\Debug\PPM-step_2.pdb
+C:\Users\rakes\source\repos\PPM-step_2\PPM-step_2\obj\Debug\PPM-step_2.csproj.AssemblyReference.cache
+C:\Users\rakes\source\repos\PPM-step_2\PPM-step_2\obj\Debug\PPM-step_2.csproj.CoreCompileInputs.cache
+C:\Users\rakes\source\repos\PPM-step_2\PPM-step_2\obj\Debug\PPM-step_2.exe
+C:\Users\rakes\source\repos\PPM-step_2\PPM-step_2\obj\Debug\PPM-step_2.pdb

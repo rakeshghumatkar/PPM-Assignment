@@ -20,6 +20,12 @@ namespace PPM_step_3
             projectList.Add(project);
         }
 
+        public void AddProjectsTest(Project project)
+        {
+            projectList.Add(project);
+        }
+
+       
         public void ViewProjects()
         {
             Console.WriteLine("Project list : ");
@@ -28,6 +34,7 @@ namespace PPM_step_3
                 projectList[j].ViewProject();
             }
         }
+        
 
         public void AddEmployee()
         {
@@ -35,6 +42,10 @@ namespace PPM_step_3
             employeeList.Add(employee);
         }
 
+        public void AddEmployeeTest(Employee employee)
+        {
+            employeeList.Add(employee);
+        }
         public void ViewEmployees()
         {
             Console.WriteLine(" Employees list : ");
@@ -48,6 +59,11 @@ namespace PPM_step_3
         public void AddRole()
         {
             Role role = new Role();
+            roleList.Add(role);
+        }
+
+        public void AddRoleTest(Role role)
+        {
             roleList.Add(role);
         }
 
@@ -72,6 +88,7 @@ namespace PPM_step_3
             return false;
         }
 
+
         public bool IsEmployee(int employeeId)
         {
             for (int i = 0; i < employeeList.Count; i++)
@@ -84,6 +101,8 @@ namespace PPM_step_3
         }
 
 
+
+
         public bool IsRole(int roleID)
         {
             for(int i=0; i<roleList.Count;i++)
@@ -94,6 +113,25 @@ namespace PPM_step_3
             Console.WriteLine(" Opps! Role-ID is not found");
             return false;
         }
+
+        public bool IsProjectEmployee(string pname, int employeeID)
+        {
+            for (int j = 0; j < projectList.Count; j++)
+            {
+                if (pname == projectList[j].projectName)
+                {
+                    for (int k = 0; k < projectList[j].projectEmployees.Count; k++)
+                    {
+                        if (projectList[j].projectEmployees[k].empolyeeId == employeeID)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
 
         public void AddEmployeeToProject(string pname, int eid)
         {

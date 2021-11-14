@@ -103,15 +103,13 @@ namespace PPM_step_3
                 Console.WriteLine(" - " + emp.firstName + " " + emp.lastName);
 
                 //View role
-                for(int j=0;j<Program.roleList.Count;j++)
+                for (int j = 0; j < Program.roleList.Count; j++)
                 {
                     if (projectEmployees[i].roleId == Program.roleList[j].roleId)
                     {
                         Program.roleList[j].ViewRole();
                     }
                 }
-               
-
             }
         }
 
