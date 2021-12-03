@@ -1,0 +1,11 @@
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\bin\Debug\PPM_LinqToSql.exe.config
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\bin\Debug\PPM_LinqToSql.exe
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\bin\Debug\PPM_LinqToSql.pdb
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\bin\Debug\EntityFramework.dll
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\bin\Debug\EntityFramework.xml
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\obj\Debug\PPM_LinqToSql.csproj.AssemblyReference.cache
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\obj\Debug\PPM_LinqToSql.csproj.CoreCompileInputs.cache
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\obj\Debug\PPM_LinqToSql.exe
+C:\Users\rakes\source\repos\PPM_LinqToSql\PPM_LinqToSql\obj\Debug\PPM_LinqToSql.pdb

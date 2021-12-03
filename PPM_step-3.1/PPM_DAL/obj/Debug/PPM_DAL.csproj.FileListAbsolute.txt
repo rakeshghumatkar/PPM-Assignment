@@ -1,0 +1,11 @@
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\bin\Debug\PPM_DAL.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\bin\Debug\PPM_DAL.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\obj\Debug\PPM_DAL.csproj.AssemblyReference.cache
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\obj\Debug\PPM_DAL.csproj.CoreCompileInputs.cache
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\obj\Debug\PPM_DAL.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\obj\Debug\PPM_DAL.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\bin\Debug\PPM_DAL.dll.config
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\bin\Debug\EntityFramework.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\bin\Debug\EntityFramework.xml
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL\bin\Debug\EntityFramework.SqlServer.xml

@@ -12,9 +12,7 @@ namespace PPM.NUnit.Tests
     [TestFixture]
     public class NUnitTestClass
     {
-        //[SetUp]
-       
-            
+        
             ProjectBL projectBLTest = new ProjectBL();
             EmployeeBL employeeBLTest = new EmployeeBL();
             RoleBL roleBLTest = new RoleBL();
@@ -22,13 +20,7 @@ namespace PPM.NUnit.Tests
             List<EmployeeModel> employees;
             List<RoleModel> roles ;
 
-        [Test]
-        public void TestMethod()
-        {
-            // TODO: Add your test code here
-            var answer = 42;
-            Assert.That(answer, Is.EqualTo(42), "Some useful error message");
-        }
+        
 
         [Test]
         public void ProjectTests()
@@ -48,15 +40,20 @@ namespace PPM.NUnit.Tests
             projectBLTest.AddProject(project1);
             projectBLTest.AddProject(project2);
 
-            projects = projectBLTest.ReturnProjectList();
+            projects = projectBLTest.GetProject();
 
 
             //Assert
 
-            Assert.AreEqual(true, projectBLTest.IsProject(project1.ProjectId));
-            Assert.AreNotEqual(false, projectBLTest.IsProject(project1.ProjectId));
-            Assert.AreEqual(true, projectBLTest.IsProject(project2.ProjectId));
-            Assert.AreEqual(false, projectBLTest.IsProject(33));
+            Assert.AreEqual(true, projectBLTest.IsProjectExist(project1.ProjectId));
+            Assert.AreNotEqual(false, projectBLTest.IsProjectExist(project1.ProjectId));
+            Assert.AreEqual(true, projectBLTest.IsProjectExist(project2.ProjectId));
+            Assert.AreEqual(false, projectBLTest.IsProjectExist(33));
+
+            //Delete Project Test
+            ProjectModel DeleteProject = projectBLTest.GetProject(22);
+            projectBLTest.DeleteProject(DeleteProject);
+            Assert.AreEqual(false, projectBLTest.IsProjectExist(22));
         }
 
         [Test]
@@ -69,7 +66,7 @@ namespace PPM.NUnit.Tests
             //Act
             roleBLTest.AddRole(role1);
             roleBLTest.AddRole(role2);
-            roles = roleBLTest.ReturnRoleList();
+            roles = roleBLTest.GetRole();
 
             //Assert
             Assert.AreEqual(111, role1.roleId);
@@ -78,8 +75,8 @@ namespace PPM.NUnit.Tests
             Assert.AreEqual(222, role2.roleId);
             Assert.AreEqual("Tester", role2.roleName);
 
-            Assert.AreEqual(true, roleBLTest.IsRole(role1.roleId));
-            Assert.AreEqual(true, roleBLTest.IsRole(role2.roleId));
+            Assert.AreEqual(true, roleBLTest.IsRoleExist(role1.roleId));
+            Assert.AreEqual(true, roleBLTest.IsRoleExist(role2.roleId));
         }
 
 
@@ -94,7 +91,7 @@ namespace PPM.NUnit.Tests
             //Act
             employeeBLTest.AddEmployee(employee1);
             employeeBLTest.AddEmployee(employee2);
-            employees = employeeBLTest.ReturnEmployeeList();
+            employees = employeeBLTest.GetEmployee();
 
             //Assert
             Assert.AreEqual(11, employee1.empolyeeId);
@@ -107,10 +104,10 @@ namespace PPM.NUnit.Tests
             Assert.AreEqual("xxx", employee2.lastName);
             Assert.AreEqual("xxx@gmail.com", employee2.emailID);
 
-            Assert.AreEqual(true, employeeBLTest.IsEmployee(employee1.empolyeeId));
-            Assert.AreEqual(true, employeeBLTest.IsEmployee(employee2.empolyeeId));
+            Assert.AreEqual(true, employeeBLTest.IsEmployeeExist(employee1.empolyeeId));
+            Assert.AreEqual(true, employeeBLTest.IsEmployeeExist(employee2.empolyeeId));
 
-            Assert.AreEqual(false, employeeBLTest.IsEmployee(33));
+            Assert.AreEqual(false, employeeBLTest.IsEmployeeExist(33));
         }
 
         
@@ -144,7 +141,7 @@ namespace PPM.NUnit.Tests
             projectBLTest.AddEmployeeToProject(222, employee3);
             projectBLTest.AddEmployeeToProject(222, employee4);
 
-            projects = projectBLTest.ReturnProjectList();
+            projects = projectBLTest.GetProject();
 
             //Assert
             Assert.AreEqual(employee1, projects[0].ProjectEmployeesList[0]);
@@ -161,31 +158,44 @@ namespace PPM.NUnit.Tests
 
             //Act : Delete Employee From The Project Test
 
-            projectBLTest.DeleteEmployeeToProject(111, employee1);
-            projects = projectBLTest.ReturnProjectList();
+            int projectIndex = -1, employeeIndex = -1;
+            //Project 1
+            Assert.AreEqual(true, projectBLTest.IsProjectEmployeeExist(11));
+            projectBLTest.IsProjectEmployeeExist(11, ref projectIndex, ref employeeIndex);
+            projectBLTest.DeleteEmployeeFromProjectList(projectIndex, employeeIndex);
+            Assert.AreEqual(true, projectBLTest.IsProjectEmployeeExist(11));
             Assert.AreNotEqual(employee1, projects[0].ProjectEmployeesList[0]);
+            Assert.AreEqual(employee2, projects[0].ProjectEmployeesList[0]);
 
-            projectBLTest.DeleteEmployeeToProject(111, employee2);
-            projects = projectBLTest.ReturnProjectList();
+            Assert.AreEqual(true, projectBLTest.IsProjectEmployeeExist(22));
+            projectBLTest.IsProjectEmployeeExist(22, ref projectIndex, ref employeeIndex);
+            projectBLTest.DeleteEmployeeFromProjectList(projectIndex, employeeIndex);
+            Assert.AreEqual(true, projectBLTest.IsProjectEmployeeExist(22));
+            Assert.AreNotEqual(employee2, projects[0].ProjectEmployeesList[0]);
+
+            Assert.AreEqual(employee3, projects[0].ProjectEmployeesList[0]);
+            Assert.AreEqual(employee4, projects[0].ProjectEmployeesList[1]);
+
+
+            //Project 2
+            Assert.AreEqual(true, projectBLTest.IsProjectEmployeeExist(11));
+            projectBLTest.IsProjectEmployeeExist(11, ref projectIndex, ref employeeIndex);
+            projectBLTest.DeleteEmployeeFromProjectList(projectIndex, employeeIndex);
+            Assert.AreNotEqual(employee1, projects[1].ProjectEmployeesList[0]);
+            Assert.AreEqual(employee2, projects[1].ProjectEmployeesList[0]);
+
+            Assert.AreEqual(true, projectBLTest.IsProjectEmployeeExist(22));
+            projectBLTest.IsProjectEmployeeExist(22, ref projectIndex, ref employeeIndex);
+            projectBLTest.DeleteEmployeeFromProjectList(projectIndex, employeeIndex);
             Assert.AreNotEqual(employee2, projects[1].ProjectEmployeesList[0]);
 
-            projectBLTest.DeleteEmployeeToProject(111, employee3);
-            projects = projectBLTest.ReturnProjectList();
-            Assert.AreNotEqual(employee3, projects[0].ProjectEmployeesList[0]);
+            Assert.AreEqual(false, projectBLTest.IsProjectEmployeeExist(22));
+            Assert.AreEqual(false, projectBLTest.IsProjectEmployeeExist(11));
 
-
-            projectBLTest.DeleteEmployeeToProject(222, employee1);
-            projects = projectBLTest.ReturnProjectList();
-            Assert.AreNotEqual(employee1, projects[1].ProjectEmployeesList[0]);
-
-            projectBLTest.DeleteEmployeeToProject(222, employee2);
-            projects = projectBLTest.ReturnProjectList();
-            Assert.AreNotEqual(employee2, projects[1].ProjectEmployeesList[1]);
-
-            //Check remaining all equal or not
-            projects = projectBLTest.ReturnProjectList();
             Assert.AreEqual(employee3, projects[1].ProjectEmployeesList[0]);
             Assert.AreEqual(employee4, projects[1].ProjectEmployeesList[1]);
+
+        
 
 
         }
@@ -205,7 +215,7 @@ namespace PPM.NUnit.Tests
             employeeBLTest.AddEmployee(employee2);
 
            
-            employees = employeeBLTest.ReturnEmployeeList();
+            employees = employeeBLTest.GetEmployee();
            
             employeeBLTest.AssignRoleToEmployee(11, role1);
             employeeBLTest.AssignRoleToEmployee(22, role2);
@@ -215,8 +225,15 @@ namespace PPM.NUnit.Tests
             Assert.AreEqual(roleID1, role1.roleId);
             int roleID2 = employees[1].GetRoleId();
             Assert.AreEqual(roleID2, role2.roleId);
-            
 
+            //Checking Employee role Assign or not
+            Assert.AreEqual(true, employeeBLTest.IsEmployeeRoleExist(111));
+            Assert.AreEqual(false, employeeBLTest.IsEmployeeRoleExist(333));
+
+            int n = -1;
+            employeeBLTest.IsEmployeeRoleExist(111,ref n);
+            employeeBLTest.DeleteRoleOfEmployee(n);
+            Assert.AreEqual(false, employeeBLTest.IsEmployeeRoleExist(111));
         }
     }
 }

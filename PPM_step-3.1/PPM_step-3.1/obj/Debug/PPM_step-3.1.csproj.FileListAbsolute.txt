@@ -7,4 +7,15 @@ C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\obj\Debug\PPM_step-3.1.exe
 C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\obj\Debug\PPM_step-3.1.pdb
 C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\BusinessLogic.dll
 C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\BusinessLogic.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\PPM_DAL.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\PPM_DAL.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\PPM_DAL.dll.config
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\BusinessLogic.dll.config
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\EntityFramework.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\EntityFramework.xml
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\PPM_DAL_EF.dll
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\PPM_DAL_EF.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\bin\Debug\PPM_DAL_EF.dll.config
 C:\Users\rakes\source\repos\PPM_step-3.1\PPM_step-3.1\obj\Debug\PPM_step-3.1.csproj.CopyComplete

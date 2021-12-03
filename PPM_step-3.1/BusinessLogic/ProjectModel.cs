@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-    public class ProjectModel
+    [Serializable]
+    public class ProjectModel : IComparable<ProjectModel>
     {
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
@@ -31,5 +32,14 @@ namespace BusinessLogic
             this.Description = description;
         }
 
+        public int CompareTo(ProjectModel other)
+        {
+            if (this.ProjectId > other.ProjectId)
+                return 1;
+            else if (this.ProjectId < other.ProjectId)
+                return -1;
+            else
+                return 0;
+        }
     }
 }

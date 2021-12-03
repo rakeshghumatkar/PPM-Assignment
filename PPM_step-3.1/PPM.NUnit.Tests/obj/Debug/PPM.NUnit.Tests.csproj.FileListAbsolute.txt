@@ -17,3 +17,4 @@ C:\Users\rakes\source\repos\PPM_step-3.1\PPM.NUnit.Tests\bin\Debug\PPM_step-3.1.
 C:\Users\rakes\source\repos\PPM_step-3.1\PPM.NUnit.Tests\bin\Debug\nunit.framework.xml
 C:\Users\rakes\source\repos\PPM_step-3.1\PPM.NUnit.Tests\obj\Debug\PPM.NUnit.Tests.dll
 C:\Users\rakes\source\repos\PPM_step-3.1\PPM.NUnit.Tests\obj\Debug\PPM.NUnit.Tests.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM.NUnit.Tests\obj\Debug\PPM.NUnit.Tests.csproj.CopyComplete

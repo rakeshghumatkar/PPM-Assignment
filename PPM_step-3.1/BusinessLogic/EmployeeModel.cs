@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-    public class EmployeeModel
+    [Serializable]
+    public class EmployeeModel : IComparable<EmployeeModel>
     {
         public int empolyeeId { get; set; }
-        //public int roleId { get; set; }
+
+        public int roleId { get; set; }
+        public int projectId { get; set; }
+
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string emailID { get; set; }
@@ -30,17 +34,7 @@ namespace BusinessLogic
 
         }
 
-        /*public EmployeeModel(int eid, int roleID,string fname, string lname, string email, string phone, string addrss)
-        {
-            empolyeeId = eid;
-            //roleId = roleID;
-            firstName = fname;
-            lastName = lname;
-            emailID = email;
-            phoneNo = phone;
-            address = addrss;
-
-        }*/
+       
 
         public RoleModel GetRole()
         {
@@ -48,7 +42,7 @@ namespace BusinessLogic
         }
         public void SetRole(RoleModel role)
         {
-            //roleId = role.roleId;
+           
             this.role.roleId = role.roleId;
             this.role.roleName = role.roleName;
         }
@@ -56,6 +50,16 @@ namespace BusinessLogic
         public int GetRoleId()
         {
             return role.roleId;
+        }
+
+        public int CompareTo(EmployeeModel other)
+        {
+            if (this.empolyeeId > other.empolyeeId)
+                return 1;
+            else if (this.empolyeeId < other.empolyeeId)
+                return -1;
+            else
+                return 0;
         }
     }
 }

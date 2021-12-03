@@ -6,27 +6,31 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic
 {
-    public class RoleModel
+    [Serializable]
+    public class RoleModel : IComparable<RoleModel>
     {
         public int roleId { get; set; }
         public string roleName { get; set; }
-
-        //public List<string> roleNames = new List<string>();
-
         public RoleModel()
         { }
 
         public RoleModel(int roleId, string roleName)
         {
             this.roleId = roleId;
-            //roleNames.Add(roleName);
             this.roleName = roleName;
 
         }
 
-       /* public void AddRole(string roleName)
+        public int CompareTo(RoleModel other)
         {
-            roleNames.Add(roleName);
-        }*/
+            if (this.roleId > other.roleId)
+                return 1;
+            else if (this.roleId < other.roleId)
+                return -1;
+            else
+                return 0;
+        }
+
+       
     }
 }

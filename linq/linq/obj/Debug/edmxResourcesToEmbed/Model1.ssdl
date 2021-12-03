@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PPMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="employeeId" />
+    </Key>
+    <Property Name="employeeId" Type="int" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="255" />
+    <Property Name="lastName" Type="varchar" MaxLength="255" />
+    <Property Name="emailId" Type="varchar" MaxLength="255" />
+    <Property Name="phoneNo" Type="varchar" MaxLength="100" />
+    <Property Name="eAddress" Type="varchar" MaxLength="255" />
+    <Property Name="createDate" Type="datetime" />
+    <Property Name="modifiedDate" Type="datetime" />
+    <Property Name="roleID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PPM.dbo.ProjectEmployees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ProjectEmployees">
+    <Key>
+      <PropertyRef Name="projectID" />
+      <PropertyRef Name="employeeID" />
+      <PropertyRef Name="assignDate" />
+    </Key>
+    <Property Name="projectID" Type="int" Nullable="false" />
+    <Property Name="employeeID" Type="int" Nullable="false" />
+    <Property Name="assignDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PPM.dbo.Projects' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Projects">
+    <Key>
+      <PropertyRef Name="projectId" />
+    </Key>
+    <Property Name="projectId" Type="int" Nullable="false" />
+    <Property Name="projectName" Type="varchar" MaxLength="255" />
+    <Property Name="pdescription" Type="varchar" MaxLength="255" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="endDate" Type="datetime" />
+    <Property Name="createDate" Type="datetime" />
+    <Property Name="modifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Name="roleId" Type="int" Nullable="false" />
+    <Property Name="roleName" Type="varchar" MaxLength="255" />
+    <Property Name="createDate" Type="datetime" />
+    <Property Name="modifiedDate" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__ProjectEm__emplo__1C873BEC">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="ProjectEmployees" Type="Self.ProjectEmployees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="employeeId" />
+      </Principal>
+      <Dependent Role="ProjectEmployees">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProjectEm__proje__1B9317B3">
+    <End Role="Projects" Type="Self.Projects" Multiplicity="1" />
+    <End Role="ProjectEmployees" Type="Self.ProjectEmployees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="projectId" />
+      </Principal>
+      <Dependent Role="ProjectEmployees">
+        <PropertyRef Name="projectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_roleID">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="roleId" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PPMModelStoreContainer">
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectEmployees" EntityType="Self.ProjectEmployees" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ProjectEmployees].[projectID] AS [projectID], 
+    [ProjectEmployees].[employeeID] AS [employeeID], 
+    [ProjectEmployees].[assignDate] AS [assignDate]
+    FROM [dbo].[ProjectEmployees] AS [ProjectEmployees]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Projects" EntityType="Self.Projects" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Projects].[projectId] AS [projectId], 
+    [Projects].[projectName] AS [projectName], 
+    [Projects].[pdescription] AS [pdescription], 
+    [Projects].[startDate] AS [startDate], 
+    [Projects].[endDate] AS [endDate], 
+    [Projects].[createDate] AS [createDate], 
+    [Projects].[modifiedDate] AS [modifiedDate]
+    FROM [dbo].[Projects] AS [Projects]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__ProjectEm__emplo__1C873BEC" Association="Self.FK__ProjectEm__emplo__1C873BEC">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="ProjectEmployees" EntitySet="ProjectEmployees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProjectEm__proje__1B9317B3" Association="Self.FK__ProjectEm__proje__1B9317B3">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectEmployees" EntitySet="ProjectEmployees" />
+    </AssociationSet>
+    <AssociationSet Name="fk_roleID" Association="Self.fk_roleID">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,12 @@
+C:\Users\rakes\source\repos\linq\linq\bin\Debug\linq.exe.config
+C:\Users\rakes\source\repos\linq\linq\bin\Debug\linq.exe
+C:\Users\rakes\source\repos\linq\linq\bin\Debug\linq.pdb
+C:\Users\rakes\source\repos\linq\linq\bin\Debug\EntityFramework.dll
+C:\Users\rakes\source\repos\linq\linq\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rakes\source\repos\linq\linq\bin\Debug\EntityFramework.xml
+C:\Users\rakes\source\repos\linq\linq\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rakes\source\repos\linq\linq\obj\Debug\linq.csproj.AssemblyReference.cache
+C:\Users\rakes\source\repos\linq\linq\obj\Debug\linq.csproj.CoreCompileInputs.cache
+C:\Users\rakes\source\repos\linq\linq\obj\Debug\linq.csproj.CopyComplete
+C:\Users\rakes\source\repos\linq\linq\obj\Debug\linq.exe
+C:\Users\rakes\source\repos\linq\linq\obj\Debug\linq.pdb

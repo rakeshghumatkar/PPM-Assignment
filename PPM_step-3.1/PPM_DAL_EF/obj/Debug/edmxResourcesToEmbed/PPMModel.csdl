@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PPMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="employeeId" />
+    </Key>
+    <Property Name="employeeId" Type="Int32" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="lastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="emailId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phoneNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="eAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+    <Property Name="modifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="roleID" Type="Int32" />
+    <NavigationProperty Name="ProjectEmployees" Relationship="Self.FK__ProjectEm__emplo__1C873BEC" FromRole="Employees" ToRole="ProjectEmployees" />
+    <NavigationProperty Name="Role" Relationship="Self.fk_roleID" FromRole="Employees" ToRole="Roles" />
+  </EntityType>
+  <EntityType Name="ProjectEmployee">
+    <Key>
+      <PropertyRef Name="projectID" />
+      <PropertyRef Name="employeeID" />
+    </Key>
+    <Property Name="projectID" Type="Int32" Nullable="false" />
+    <Property Name="employeeID" Type="Int32" Nullable="false" />
+    <Property Name="assignDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK__ProjectEm__emplo__1C873BEC" FromRole="ProjectEmployees" ToRole="Employees" />
+    <NavigationProperty Name="Project" Relationship="Self.FK__ProjectEm__proje__1B9317B3" FromRole="ProjectEmployees" ToRole="Projects" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="projectId" />
+    </Key>
+    <Property Name="projectId" Type="Int32" Nullable="false" />
+    <Property Name="projectName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="pdescription" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="endDate" Type="DateTime" Precision="3" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+    <Property Name="modifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ProjectEmployees" Relationship="Self.FK__ProjectEm__proje__1B9317B3" FromRole="Projects" ToRole="ProjectEmployees" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Name="roleId" Type="Int32" Nullable="false" />
+    <Property Name="roleName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="createDate" Type="DateTime" Precision="3" />
+    <Property Name="modifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Employees" Relationship="Self.fk_roleID" FromRole="Roles" ToRole="Employees" />
+  </EntityType>
+  <Association Name="FK__ProjectEm__emplo__1C873BEC">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+    <End Role="ProjectEmployees" Type="Self.ProjectEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="employeeId" />
+      </Principal>
+      <Dependent Role="ProjectEmployees">
+        <PropertyRef Name="employeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_roleID">
+    <End Role="Roles" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="roleId" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProjectEm__proje__1B9317B3">
+    <End Role="Projects" Type="Self.Project" Multiplicity="1" />
+    <End Role="ProjectEmployees" Type="Self.ProjectEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projects">
+        <PropertyRef Name="projectId" />
+      </Principal>
+      <Dependent Role="ProjectEmployees">
+        <PropertyRef Name="projectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PPMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="ProjectEmployees" EntityType="Self.ProjectEmployee" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <AssociationSet Name="FK__ProjectEm__emplo__1C873BEC" Association="Self.FK__ProjectEm__emplo__1C873BEC">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="ProjectEmployees" EntitySet="ProjectEmployees" />
+    </AssociationSet>
+    <AssociationSet Name="fk_roleID" Association="Self.fk_roleID">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProjectEm__proje__1B9317B3" Association="Self.FK__ProjectEm__proje__1B9317B3">
+      <End Role="Projects" EntitySet="Projects" />
+      <End Role="ProjectEmployees" EntitySet="ProjectEmployees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
