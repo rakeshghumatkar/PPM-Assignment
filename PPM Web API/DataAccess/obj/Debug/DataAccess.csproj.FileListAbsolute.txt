@@ -1,0 +1,10 @@
+C:\Users\rakes\OneDrive\Desktop\PPM\PPM Web API\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\rakes\OneDrive\Desktop\PPM\PPM Web API\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\rakes\OneDrive\Desktop\PPM\PPM Web API\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\rakes\OneDrive\Desktop\PPM\PPM Web API\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rakes\OneDrive\Desktop\PPM\PPM Web API\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\rakes\OneDrive\Desktop\PPM\PPM Web API\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\rakes\OneDrive\Desktop\PPM\PPM Web API\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\rakes\OneDrive\Desktop\PPM\PPM Web API\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\rakes\OneDrive\Desktop\PPM\PPM Web API\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\rakes\OneDrive\Desktop\PPM\PPM Web API\DataAccess\obj\Debug\DataAccess.pdb

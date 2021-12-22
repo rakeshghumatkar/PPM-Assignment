@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "q+A/fsleOjzaZ8zlYziiiQ7I0K6Vt2xwz43sjfMbuInNaPj6ZpSo3jK3gG6ZNT7LxI5feNKfwp966hSJ3ggTwA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rakes\\OneDrive\\Desktop\\PPM\\PPM Web API\\DataAccess\\DataAccess.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rakes\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512"
+  ],
+  "logs": []
+}
