@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang ="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 
+<meta charset="ISO-8859-1">
+<title>Employee Module </title>
+</head>
+<body>
+	<div class="container">
+		<h1>Employee Portal</h1>
+		<hr>
+		<div th:if="${employee.employeeId==null}"><h2>Create Employee</h2></div>
+		<div th:unless="${employee.employeeId==null}"><h2>Update Employee</h2></div>
+		<div>
+			<form action="#" th:action="@{/saveEmployee}" th:object ="${employee}" method ="POST">
+			
+			<input type="hidden" th:field="*{employeeId}">
+			
+			<input type = "text" th:field = "*{firstName}" placeholder = "Employee FirstName" class = "form-control mb-4 col-4">
+			
+			<input type = "text" th:field = "*{lastName}" placeholder = "Employee lastName" class = "form-control mb-4 col-4">
+			
+			<input type = "text" th:field = "*{emailId}" placeholder = "Employee EmailId" class = "form-control mb-4 col-4">
+			
+			<input type = "text" th:field = "*{phoneNo}" placeholder = "Employee PhoneNo." class = "form-control mb-4 col-4">
+			
+			<input type = "text" th:field = "*{address}" placeholder = "Employee Address" class = "form-control mb-4 col-4">
+			
+			<!-- <input type = "text" th:field = "*{createDate}" placeholder = "Employee Create Date" class = "form-control mb-4 col-4">
+			
+			<input type = "text" th:field = "*{modifiedDate}" placeholder = "Employee Modified Date" class = "form-control mb-4 col-4">
+			 -->
+			 
+			 
+			<div class="form-group row">
+				<label class="col-form-label col-sm-4">Roles</label>
+				<div class="col-sm-8 text-left">
+				<th:block th:each="roles : ${listRole}">
+				<div>
+				<input type = "radio" th:field = "*{role}" th:text="${roles.roleName}" th:value="${roles.roleId}">
+				</div>
+				</div>
+			</div>
+			
+			<br>
+			<div align = "Center">
+				<button type="submit" class = "btn btn-info col-2" >Save Employee</button>
+			</div>
+			</form>
+		</div> 
+		<br>
+		<br>
+		<div align = "left">
+			<a th:href="@{/employees}" class ="btn btn-primary">Back To List</a>
+		</div>
+		
+	</div>
+
+</body>
+</html>

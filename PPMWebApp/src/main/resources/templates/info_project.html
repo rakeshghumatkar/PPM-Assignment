@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang ="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 
+<meta charset="ISO-8859-1">
+<title>Project Module </title>
+</head>
+<body>
+	<div class="container">
+		<h1>Project Portal</h1>
+		<hr>
+		<h2>Project Info</h2>
+		<div>
+		<form action="#"  th:object ="${project}" >
+		
+		<input type = "text" th:field = "*{projectName}" placeholder = "Project Name" class = "form-control mb-4 col-4">
+		
+		<input type = "text" th:field = "*{description}" placeholder = "Project Description" class = "form-control mb-4 col-4">
+		
+		<input type = "text" th:field = "*{startDate}" placeholder = "Project Start Date" class = "form-control mb-4 col-4">
+		
+		<input type = "text" th:field = "*{endDate}" placeholder = "Project End Date" class = "form-control mb-4 col-4">
+		
+		
+		<input type = "text" th:field = "*{createDate}" placeholder = "Project Create Date" class = "form-control mb-4 col-4">
+		
+		<input type = "text" th:field = "*{modifiedDate}" placeholder = "Project Modified Date" class = "form-control mb-4 col-4">
+		
+		  <div class="form-group row">
+				<label class="col-form-label col-sm-4">Employees Id</label>
+				<div class="col-sm-8 text-left">
+				<th:block th:each="employee : ${project.getEmployee()}">
+				<ul>
+				<li th:text ="${employee}" ></li>
+				</ul>
+				</div>
+			</div> 
+		
+		
+		</form>
+		</div>
+		<div align = "left">
+			<a th:href="@{/projects}" class ="btn btn-primary">Back To List</a>
+		</div>
+	</div>
+
+</body>
+</html>
