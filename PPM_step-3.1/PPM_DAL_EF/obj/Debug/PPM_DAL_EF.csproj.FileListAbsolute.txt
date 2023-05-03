@@ -9,3 +9,4 @@ C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL_EF\obj\Debug\PPM_DAL_EF.csproj.
 C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL_EF\obj\Debug\PPM_DAL_EF.csproj.CoreCompileInputs.cache
 C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL_EF\obj\Debug\PPM_DAL_EF.dll
 C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL_EF\obj\Debug\PPM_DAL_EF.pdb
+C:\Users\rakes\source\repos\PPM_step-3.1\PPM_DAL_EF\obj\Debug\PPM_DAL_EF.csproj.CopyComplete

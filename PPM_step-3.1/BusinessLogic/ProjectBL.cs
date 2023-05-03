@@ -112,9 +112,6 @@ namespace BusinessLogic
         public void AddEmployeeToProject(int pid, EmployeeModel emp)
         {
             //var result = ProjectList.Select(x=> x).Where(x=>x.ProjectId.Equals(pid));
-            
-
-            
             for (int i = 0; i < ProjectList.Count; i++)
             {
                 if (pid == ProjectList[i].ProjectId)

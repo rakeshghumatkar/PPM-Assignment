@@ -127,9 +127,6 @@ namespace PPM_step_3._1
                                                     {
                                                         employeeBL.AddEmployeeToProjectIntoDB(pid1, eid1);
                                                         Console.WriteLine("Employee Added Successfully!\n");
-
-                                                       
-
                                                     }
                                                     else
                                                     {

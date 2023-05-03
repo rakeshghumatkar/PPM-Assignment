@@ -15,3 +15,4 @@ C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\bin\Debug\EntityFramework
 C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\bin\Debug\PPM_DAL_EF.dll
 C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\bin\Debug\PPM_DAL_EF.pdb
 C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\bin\Debug\PPM_DAL_EF.dll.config
+C:\Users\rakes\source\repos\PPM_step-3.1\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
